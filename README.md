@@ -10,4 +10,5 @@ This is a simple app that allows users to see details and cast info about popula
 2. Create a Constants.swift file in the cloned Xcode project.
 3. Create these two constants in the file: 
         static let imageBaseUrl = "https://image.tmdb.org/t/p/original" 
+        
         let apiKey = "YOUR API KEY HERE"

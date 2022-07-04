@@ -12,7 +12,7 @@ import Foundation
 
 class TrendingViewModel: ObservableObject {
     @Published var fetchedMovies: [Movie] = []
-    let movieUrl = "https://api.themoviedb.org/3/trending/movie/day?api_key=925efd54ae6d96d9ae2c1f8891d90f60"
+    let movieUrl = "https://api.themoviedb.org/3/trending/movie/day?api_key=\(Constants.apiKey)"
     
     func fetchMovies() async {
         guard let url = URL(string:"\(movieUrl)") else {

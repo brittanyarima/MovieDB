@@ -11,7 +11,7 @@ import SwiftUI
 class MovieViewModel: ObservableObject {
     @Published var fetchedMovies: [Movie] = []
     @Published var page = 1
-    let popularMovieUrl = "https://api.themoviedb.org/3/movie/popular?api_key=925efd54ae6d96d9ae2c1f8891d90f60&language=en-US&page="
+    let popularMovieUrl = "https://api.themoviedb.org/3/movie/popular?api_key=\(Constants.apiKey)&language=en-US&page="
     
 
     

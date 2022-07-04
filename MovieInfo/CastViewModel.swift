@@ -15,7 +15,7 @@ class CastViewModel: ObservableObject {
     
         
     func fetchCast(movieId: Int) async {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/\(movieId)/credits?api_key=925efd54ae6d96d9ae2c1f8891d90f60&language=en-US") else {
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/\(movieId)/credits?api_key=\(Constants.apiKey)&language=en-US") else {
             print("Invalid URL")
             return
         }

@@ -13,7 +13,7 @@ class NowPlayingViewModel: ObservableObject {
 
     @Published var fetchedMovies: [Movie] = []
     @Published var page = 1
-    let movieUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=925efd54ae6d96d9ae2c1f8891d90f60&language=en-US&page="
+    let movieUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=\(Constants.apiKey)&language=en-US&page="
 
 
     func fetchMovies() async {

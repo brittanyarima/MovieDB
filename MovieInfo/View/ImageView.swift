@@ -20,20 +20,11 @@ struct ImageView: View {
                     .frame(width: size)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .frame(maxHeight: 300)
-                    
-                 
-                   
-                
             } placeholder: {
                 ProgressView()
             }
-       
         }
         .frame(maxHeight: 300)
-        
-        
-    
-
     }
 }
 

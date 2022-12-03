@@ -11,10 +11,7 @@ struct CastRowView: View {
     let movie: Movie
     let cast: Cast
     
-    
-    
     var body: some View {
-     
         VStack(spacing: 10) {
             AsyncImage(url: URL(string: "\(Constants.imageBaseUrl)\(cast.profilePath ?? "")")) { image in
                 image
@@ -34,17 +31,10 @@ struct CastRowView: View {
                 .font(.system(size: 8))
                 .multilineTextAlignment(.center)
                 .lineLimit(1)
-
-            
         }
         .frame(width: 100, height: 100)
-        
-        
-           
-        
-        }
-       
     }
+}
 
 struct CastRowView_Previews: PreviewProvider {
     static var previews: some View {

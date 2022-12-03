@@ -10,14 +10,9 @@ import SwiftUI
 struct TrendingMovieView: View {
     let movie: Movie
 
-    
     var body: some View {
-      
         Text(movie.title)
-        
     }
-    
-    
 }
 
 struct TrendingMovieView_Previews: PreviewProvider {

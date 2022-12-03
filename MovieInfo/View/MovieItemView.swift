@@ -11,10 +11,8 @@ struct MovieItemView: View {
     let movie: Movie
     
     var body: some View {
-    
             ImageView(movie: movie, size: 125)
             .padding(.horizontal, 5)
-       
     }
 }
 

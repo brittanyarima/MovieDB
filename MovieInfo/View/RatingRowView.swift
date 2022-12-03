@@ -11,10 +11,8 @@ struct RatingRowView: View {
     let movie: Movie
     
     var body: some View {
-        
         HStack {
             RatingView(movie: movie)
-            
             Text(movie.voteCount.roundedWithAbbreviations )
                 .font(.caption)
                 .foregroundColor(.yellow)

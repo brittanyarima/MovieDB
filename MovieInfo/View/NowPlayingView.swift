@@ -12,31 +12,20 @@ struct NowPlayingView: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            
-            
-                LazyHStack {
-                    
-                    ForEach(viewModel.fetchedMovies, id: \.id) { movie in
-                        
-                        NavigationLink {
-                            MovieDetailView(movie: movie)
-                        } label: {
-                            MovieItemView(movie: movie)
-                        }
-                        
+            LazyHStack {
+                ForEach(viewModel.fetchedMovies, id: \.id) { movie in
+                    NavigationLink {
+                        MovieDetailView(movie: movie)
+                    } label: {
+                        MovieItemView(movie: movie)
                     }
-                    
-                    
-                    
                 }
-                .frame(maxHeight: 300)
-            
-
+            }
+            .frame(maxHeight: 300)
         }
         .task {
             await viewModel.fetchMovies()
         }
-        
     }
 }
 

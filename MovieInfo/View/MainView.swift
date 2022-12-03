@@ -13,17 +13,12 @@ struct MainView: View {
             ContentView()
                 .tabItem {
                     Image(systemName: "house")
-                       
                 }
             
             SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
-                        
                 }
-              
-            
-            
         }
     }
 }

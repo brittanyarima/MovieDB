@@ -22,13 +22,11 @@ struct RatingView: View {
     var halfFullCount: Int {
         (fullCount + emptyCount) < 10 ? 1 : 0
     }
-    
-    
+
     private var fullStar: some View {
         Image(systemName: "star.fill")
             .foregroundColor(RatingView.COLOR)
             .font(.system(size: 10))
-        
     }
     
     private var halfFullStar: some View {
@@ -43,10 +41,8 @@ struct RatingView: View {
             .font(.system(size: 10))
     }
     
-    
     var body: some View {
         HStack {
-             
             ForEach(0..<fullCount, id: \.self) { _ in
                 self.fullStar
             }
@@ -56,10 +52,6 @@ struct RatingView: View {
             ForEach(0..<emptyCount, id: \.self) { _ in
                 self.emptyStar
             }
-            
-            
-            
-            
         }
     }
 }

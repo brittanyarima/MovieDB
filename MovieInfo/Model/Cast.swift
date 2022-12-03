@@ -17,15 +17,10 @@ struct Cast: Codable {
     let profilePath: String?
     let character: String?
     let order: Int?
-
 }
-
-
-
 
 extension Cast {
     static let dummyData: [Cast] = [
         Cast(id: 123, name: "Brad Pitt", profilePath: "/cckcYc2v0yh1tc9QjRelptcOBko.jpg", character: "Person1", order: 1)
-    
     ]
 }

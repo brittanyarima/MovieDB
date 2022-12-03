@@ -19,13 +19,8 @@ struct SearchView: View {
                         MovieDetailView(movie: movie)
                     } label: {
                         MovieTitleView(movie: movie, color: .black, isShowingRating: false)
-                            
-                           
                     }
-                    
-
                 }
-                
             }
             .searchable(text: $searchText)
             .navigationTitle("Search Movies")
@@ -34,7 +29,6 @@ struct SearchView: View {
                     await viewModel.fetchMovie(searchText: searchText)
                     searchText = ""
                 }
-                
             }
         }
         .accentColor(.yellow)

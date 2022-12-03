@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension Int {
     var roundedWithAbbreviations: String {
         let number = Double(self)
@@ -19,8 +18,6 @@ extension Int {
         else if thousand >= 1.0 {
             return "\(round(thousand*10)/10)K"
         }
-        else {
-            return "\(self)"
-        }
+        else { return "\(self)" }
     }
 }

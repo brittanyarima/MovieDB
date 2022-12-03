@@ -7,14 +7,11 @@
 
 import Foundation
 
-
-
 class NowPlayingViewModel: ObservableObject {
 
     @Published var fetchedMovies: [Movie] = []
     @Published var page = 1
     let movieUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=\(Constants.apiKey)&language=en-US&page="
-
 
     func fetchMovies() async {
         guard let url = URL(string:"\(movieUrl)\(page)") else {
@@ -29,11 +26,9 @@ class NowPlayingViewModel: ObservableObject {
 
             if let decodedData = try? decoder.decode(MovieResponse.self, from: data) {
                 print("Decoded Cast Data")
-
                 DispatchQueue.main.async {
                     self.fetchedMovies.append(contentsOf: decodedData.results)
                 }
-
             }
         } catch {
             print("Invalid Data")

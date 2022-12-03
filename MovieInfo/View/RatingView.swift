@@ -9,10 +9,8 @@ import SwiftUI
 
 struct RatingView: View {
     let movie: Movie
-    
-    private static let COLOR = Color.yellow // The color of the stars
-    
- 
+    private static let COLOR = Color.yellow
+
     var fullCount: Int {
         Int(movie.voteAverage )
     }

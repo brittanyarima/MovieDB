@@ -8,7 +8,6 @@
 import Foundation
 
 class NowPlayingViewModel: ObservableObject {
-
     @Published var fetchedMovies: [Movie] = []
     @Published var page = 1
     let movieUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=\(Constants.apiKey)&language=en-US&page="

@@ -24,12 +24,9 @@ class SearchViewModel: ObservableObject {
 
             if let decodedData = try? decoder.decode(MovieResponse.self, from: data) {
                 print("Decoded Cast Data")
-                
                 DispatchQueue.main.async {
                     self.searchResults = decodedData.results
-                    
                 }
-                
             }
         } catch {
             print("Invalid Data")

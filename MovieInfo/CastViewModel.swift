@@ -10,10 +10,7 @@ import Foundation
 
 class CastViewModel: ObservableObject {
     @Published var fetchedCast: [Cast] = []
-    
-    
-    
-        
+
     func fetchCast(movieId: Int) async {
         guard let url = URL(string: "https://api.themoviedb.org/3/movie/\(movieId)/credits?api_key=\(Constants.apiKey)&language=en-US") else {
             print("Invalid URL")
@@ -27,16 +24,12 @@ class CastViewModel: ObservableObject {
 
             if let decodedData = try? decoder.decode(CastResponse.self, from: data) {
                 print("Decoded Cast Data")
-                
                 DispatchQueue.main.async {
                     self.fetchedCast = decodedData.cast
                 }
-                
             }
         } catch {
             print("Invalid Data")
         }
     }
-    
-    
 }

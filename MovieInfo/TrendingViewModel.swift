@@ -7,9 +7,6 @@
 
 import Foundation
 
-
-
-
 class TrendingViewModel: ObservableObject {
     @Published var fetchedMovies: [Movie] = []
     let movieUrl = "https://api.themoviedb.org/3/trending/movie/day?api_key=\(Constants.apiKey)"
@@ -27,11 +24,9 @@ class TrendingViewModel: ObservableObject {
 
             if let decodedData = try? decoder.decode(MovieResponse.self, from: data) {
                 print("Decoded Cast Data")
-
                 DispatchQueue.main.async {
                     self.fetchedMovies = decodedData.results
                 }
-
             }
         } catch {
             print("Invalid Data")

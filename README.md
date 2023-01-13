@@ -12,4 +12,4 @@ This is a simple app that allows users to see details and cast info about popula
        
         static let imageBaseUrl = "https://image.tmdb.org/t/p/original" 
         
-        let apiKey = "YOUR API KEY HERE"
+        static let apiKey = "YOUR API KEY HERE"
